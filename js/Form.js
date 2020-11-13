@@ -39,7 +39,9 @@ class Form{
 
         this.resetButton.mousePressed(()=>{
             //update the database to set playercount and gamestate to 0
-            
+            player.updateCount(0);
+            game.writeState(0);
+            location.reload();
         })
         }
     }

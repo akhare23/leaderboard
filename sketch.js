@@ -4,6 +4,7 @@ var car1, car2, car3, car4, cars;
 var gameState = 0,playerCount;
 var car1Image, car2Image, car3Image, car4Image;
 var track, ground;
+var leaderboard;
 
 var form, game, player;
 var allPlayers;
@@ -25,6 +26,7 @@ function setup(){
 }
 
 function draw(){
+
     if(playerCount === 4){
         game.writeState(1);
     }
@@ -35,4 +37,6 @@ function draw(){
     if(gameState===2){
         game.end();
     }
+
+    
 }

@@ -7,7 +7,7 @@ class Form{
         this.leaderboard = createElement("h2");
         this.leaderboard1 = createElement("h2");
         this.leaderboard2 = createElement("h2");
-        this.leaderboard3 = createElement("h3");
+        this.leaderboard3 = createElement("h2");
     }
     hide(){
         this.input.hide();
@@ -20,12 +20,12 @@ class Form{
         title.position(displayWidth/2-75,0);
 
         this.leaderboard.html("Leaderboard");
-        this.leaderboard.position(200,200);
+        this.leaderboard.position(100,100);
         this.leaderboard1.html("Leaderboard");
-        this.leaderboard1.position(200,250);
+        this.leaderboard1.position(100,150);
         this.leaderboard2.html("leaderboard");
-        this.leaderboard2.position(200,300);
-        this.leaderboard3.position(200,350);
+        this.leaderboard2.position(100,200);
+        this.leaderboard3.position(100,250);
         if(gameState === 1 || gameState === 0){
             this.leaderboard.hide();
             this.leaderboard1.hide();

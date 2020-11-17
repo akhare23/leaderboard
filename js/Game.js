@@ -78,16 +78,21 @@ class Game{
 
         if(player.distance > 4500){
             gameState = 2;
+            console.log(player.rank);
             player.rank+=1;
+            console.log(player.rank);
             Player.updateCarsAtEnd(player.rank);
+            player.update();
         }
     }
 
     end(){
+        Player.getPlayerInfo();
         for(var i in allPlayers){
         
           
-          if(allPlayers[i].rank !== undefined){
+          if(allPlayers[i].rank !== null){
+            
             if(i === "player1"){
             form.leaderboard.html(i + ":" + allPlayers[i].rank)
             form.leaderboard.show();
@@ -97,16 +102,15 @@ class Game{
                 form.leaderboard1.show();
             }
             if(i === "player3"){
-                form.leaderboard2.html(i + ":" + allPlayers[i].rank);
+                form.leaderboard2.html(allPlayers[i].name + ":" + allPlayers[i].rank);
                 form.leaderboard2.show();
             }
             if(i === "player4"){
-                form.leaderboard3.html(i + ":" + allPlayers[i].rank);
-                form.leaderboard.show();
+                form.leaderboard3.html(allPlayers[i].name + ":" + allPlayers[i].rank);
+                form.leaderboard3.show();
             }
         }
     }
-        console.log(player.rank);
     }
     
 }
